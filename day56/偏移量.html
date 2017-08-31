@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>egon-IT界一股清流</title>
+    <style>
+        *{
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+<h3>偏移量介绍</h3>
+<p class="p1">first para</p>
+<p class="p2">second para</p>
+<button>offset</button>
+
+<script src="jquery-3.2.1.js"></script>
+<script>
+    var $p_offset=$(".p1").offset();  //p1对象的偏移量
+    var $left=$p_offset.left; //取到距离左边的距离
+    var $top=$p_offset.top; //取到距离上边的距离
+    $(".p2").text("the left:"+$left+"  the top:"+$top); //把两个距离的值放到p2的text
+
+    $("button").click(function () {
+        $(".p1").offset({left:100,top:200}); //完成定位
+    })
+</script>
+</body>
+</html>

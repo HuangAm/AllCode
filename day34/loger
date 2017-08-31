@@ -1,0 +1,10 @@
+Fri 28 Apr 2017 18:48:13 logging模块.py [line:12] DEBUG debug message你好
+Fri 28 Apr 2017 18:48:13 logging模块.py [line:13] INFO info message
+Fri 28 Apr 2017 18:48:13 logging模块.py [line:14] WARNING waining message
+Fri 28 Apr 2017 18:48:13 logging模块.py [line:15] ERROR error message
+Fri 28 Apr 2017 18:48:13 logging模块.py [line:16] CRITICAL critical message
+Fri 28 Apr 2017 19:01:10 logging模块.py [line:12] DEBUG debug message你好
+Fri 28 Apr 2017 19:01:10 logging模块.py [line:13] INFO info message
+Fri 28 Apr 2017 19:01:10 logging模块.py [line:14] WARNING waining message
+Fri 28 Apr 2017 19:01:10 logging模块.py [line:15] ERROR error message
+Fri 28 Apr 2017 19:01:10 logging模块.py [line:16] CRITICAL critical message

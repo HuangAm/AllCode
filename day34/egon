@@ -1,0 +1,6 @@
+2017-05-01 18:25:16,471-root-DEBUG-logger debug message
+2017-05-01 18:25:48,612-root-DEBUG-logger debug message
+2017-05-01 18:25:48,612-root-INFO-logger info message
+2017-05-01 18:25:48,612-root-WARNING-logger hjkl
+2017-05-01 18:25:48,614-root-ERROR-logger ghjk
+2017-05-01 18:25:48,614-root-CRITICAL-logger hjk

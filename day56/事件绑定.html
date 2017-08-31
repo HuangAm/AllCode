@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>egon-IT界一股清流</title>
+</head>
+<body>
+<p>PPPPP</p>
+
+<ul>
+    <li>1111</li>
+    <li>2222</li>
+    <li>3333</li>
+    <li>4444</li>
+</ul>
+
+<button>add</button>
+<button class="off_p">off</button>
+
+</body>
+<script src="jquery-3.2.1.js"></script>
+<script>
+    //简写绑定时间实际上就是调用bind方法
+//    $("p").click(function () {
+//        alert(123);
+//    });
+//    $("p").bind("click",function () {
+//        alert(456);
+//    });
+
+    //三种加载方式
+//    window.onload=function () { };//js里面加载
+//    $(function () { });//jqurey里面加载
+//    $(document).ready(function () {}); //这三个一个几把功能
+
+    //绑定事件之on与bind的区别
+    $("button").click(function () {
+        $("ul").append("<li>222<li>");
+    });
+//    $("li").click(function () {
+//        alert(123456);
+//    });
+    $("ul").on("click","li",function () {
+        alert(100);  //强大的on被他顶上,新的旧的都被盯上了
+    })
+
+
+</script>
+</html>

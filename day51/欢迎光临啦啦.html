@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>egon-IT界最帅的男人</title>
+    <style>
+        input{width:54px;}
+    </style>
+    <script>
+        function func() {
+            var arr=["欢","迎","光","临"];
+            var s_arr="";
+            for (i=0;i<arr.length;i++){
+            s_arr=s_arr+arr[i];
+            }
+            var ele=document.getElementById("timer");
+            ele.value=s_arr;
+            setInterval(bar,1000);
+            function bar() {
+                var a=arr.splice(0,1).toString();
+                arr.splice(3,0,a);
+                var s_arr="";
+                for (i=0;i<arr.length;i++){
+                    s_arr=s_arr+arr[i];
+                }
+                var ele=document.getElementById("timer");
+                ele.value=s_arr;
+            }
+         }
+    </script>
+</head>
+<body>
+    <input type="text" id="timer" onclick="func()">
+</body>
+</html>

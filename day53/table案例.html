@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>egon-IT界最帅的男人</title>
+</head>
+<body>
+
+<button class="all">全选</button>
+<button class="reverse">反选</button>
+<button class="cancel">取消</button>
+<hr>
+
+<table border="2px" class="server_tb">
+    <tr>
+        <td><input type="checkbox" class="item"></td>
+        <td>1111</td>
+        <td>1111</td>
+        <td>1111</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="item"></td>
+        <td>1111</td>
+        <td>1111</td>
+        <td>1111</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="item"></td>
+        <td>1111</td>
+        <td>1111</td>
+        <td>1111</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="item"></td>
+        <td>1111</td>
+        <td>1111</td>
+        <td>1111</td>
+    </tr>
+</table>
+<script>
+    var ele_all=document.getElementsByClassName("all")[0];
+    var ele_reverse=document.getElementsByClassName("reverse")[0];
+    var ele_cancel=document.getElementsByClassName("cancel")[0];
+    var input_arr=document.getElementsByClassName("item");
+    ele_all.onclick=function () {
+        for (var i=0;i<input_arr.length;i++){
+            console.log(input_arr[i]);
+            var input=input_arr[i];
+            input.checked=true;
+        }
+    };
+    ele_reverse.onclick=function () {
+        for (var i=0;i<input_arr.length;i++){
+            console.log(input_arr[i]);
+            var input=input_arr[i];
+            if (input.checked){
+                input.checked=false;
+            }else {
+                input.checked=true;
+            }
+        }
+    };
+    ele_cancel.onclick=function () {
+        for (var i=0;i<input_arr.length;i++){
+            console.log(input_arr[i]);
+            var input=input_arr[i];
+            input.checked=false;
+        }
+    };
+</script>
+
+</body>
+</html>

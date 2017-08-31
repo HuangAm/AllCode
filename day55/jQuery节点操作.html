@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>egon-IT界的一股清流</title>
+</head>
+<body>
+
+<div>
+    <p>PPP</p>
+</div>
+
+<button>add</button>
+<script src="jquery-3.2.1.js"></script>
+<script>
+    //内部插入
+//    $("button").click(function () {
+//        $("div").append("<h1>yuan</h1>")
+//    });
+//    $("button").click(function () {
+//        var $ele=$("<p>haa</p>");
+//        $ele.appendTo("div");
+//    })
+    //外部插入
+//    $("div").after("<h1>egon</h1>");
+//    $("div").before("<h1>gaolu</h1>")
+    //替换
+//    $("button").click(function () {
+//        $("div").replaceWith("<h1>egon</h1>")
+//    });
+    //删除
+//    $("button").click(function () {
+//        $("div").empty(); //只删除内容
+//        $("div").remove(); //删除全部
+//    });
+    //克隆
+    $("button").click(function () {
+        var $ele=$("div").clone(function () {
+            $(this)
+        });
+        $("body").append($ele)
+    })
+
+</script>
+</head>
+</body>
+</html>
+

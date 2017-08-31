@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>egon-IT界一股清流</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+        }
+        .back{
+            background-color: wheat;
+        }
+        .top{
+            background-color: chocolate;
+            color: white;
+            line-height: 40px;
+            width: 80px;
+            position:fixed;
+            right:20px;
+            bottom: 20px;
+            text-align: center;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="back">
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+    <h1>egon</h1>
+</div>
+<div class="top">返回顶部</div>
+</body>
+<script src="jquery-3.2.1.js"></script>
+<script>
+    //返回顶部 绑定单机事件
+    $(".top").click(function () {
+        $(window).scrollTop(0);
+    });
+    //窗口 绑定拖动滚动条事件
+    $(window).scroll(function () {
+        if ($(window).scrollTop()>300){
+            $(".top").show()
+        }
+        else {
+            $(".top").hide()
+        }
+    })
+</script>
+</html>

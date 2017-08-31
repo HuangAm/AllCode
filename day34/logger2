@@ -1,0 +1,39 @@
+logger warning message
+logger error message
+logger critical message
+logger warning message
+logger error message
+logger critical message
+logger warning message
+logger error message
+logger critical message
+logger warning message
+logger error message
+logger critical message
+logger warning message
+logger error message
+logger critical message
+2017-04-28 19:41:05,947-root-WARNING-logger warning message
+2017-04-28 19:41:05,947-root-ERROR-logger error message
+2017-04-28 19:41:05,947-root-CRITICAL-logger critical message
+2017-04-28 19:41:42,236-root-WARNING-logger warning message
+2017-04-28 19:41:42,236-root-ERROR-logger error message
+2017-04-28 19:41:42,236-root-CRITICAL-logger critical message
+2017-04-28 19:41:58,674-root-WARNING-logger warning message
+2017-04-28 19:41:58,674-root-ERROR-logger error message
+2017-04-28 19:41:58,674-root-CRITICAL-logger critical message
+2017-04-28 19:48:21,233-root-DEBUG-logger debug messgage
+2017-04-28 19:48:21,233-root-INFO-logger info message
+2017-04-28 19:48:21,233-root-WARNING-logger warning message
+2017-04-28 19:48:21,234-root-ERROR-logger error message
+2017-04-28 19:48:21,234-root-CRITICAL-logger critical message
+2017-04-28 19:53:31,107-root-DEBUG-logger debug messgage
+2017-04-28 19:53:31,107-root-INFO-logger info message
+2017-04-28 19:53:31,107-root-WARNING-logger warning message
+2017-04-28 19:53:31,107-root-ERROR-logger error message
+2017-04-28 19:53:31,107-root-CRITICAL-logger critical message
+2017-05-07 19:13:43,670-root-DEBUG-logger debug messgage
+2017-05-07 19:13:43,960-root-INFO-logger info message
+2017-05-07 19:13:43,961-root-WARNING-logger warning message
+2017-05-07 19:13:43,961-root-ERROR-logger error message
+2017-05-07 19:13:43,963-root-CRITICAL-logger critical message

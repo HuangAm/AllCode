@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>egon-IT界最帅的男人</title>
+    <style>
+        .div1{
+            width:200px;
+            height: 200px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        div
+    </div>
+    <script>
+        var ele=document.getElementsByClassName("div1")[0];
+        ele.onmouseover=function () {
+            this.style.color="white";
+            this.style.cursor="pointer"
+        };
+//        ele.onmouseout=function () {
+//            this.style.color="black";
+//        };
+        ele.onmouseleave=function () {
+            this.style.color="black";
+        };
+        ele.onmousedown=function () {
+            this.style.color="green"
+        }
+    </script>
+</body>
+</html>

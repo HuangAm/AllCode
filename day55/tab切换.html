@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>egon-IT界的一股清流</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+        }
+        .outer{
+            width:80%;
+            margin: 0 auto;
+        }
+        .nav li{
+            width: 32%;
+            list-style: none;
+            float: left;
+            height: 40px;
+            background:wheat;
+            text-align: center;
+            line-height:40px;
+            border-right:solid 2px green;
+        }
+        .content{
+            height:400px;
+            background-color: gray;
+            margin-top: 40px;
+        }
+        ul .active{
+            background-color: #204982;
+        }
+        .hide{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+<div class="outer">
+    <ul class="nav">
+        <li f="con1" class="active">菜单一</li>
+        <li f="con2">菜单二</li>
+        <li f="con3">菜单三</li>
+    </ul>
+    <div class="content">
+        <div class="con1">111111</div>
+        <div class="con2 hide">222222</div>
+        <div class="con3 hide">333333</div>
+    </div>
+
+</div>
+</body>
+<script src="jquery-3.2.1.js"></script>
+<script>
+    //操作一
+//    var outer=document.getElementsByClassName("outer")[0];
+//    var lis=outer.getElementsByTagName("li");
+//    for (var i=0;i<lis.length;i++){
+//        lis[i].onclick=function () {
+//            $(this).addClass("active").siblings().removeClass("active");
+//            var $name=$(this).attr("f");
+//            $("."+$name).removeClass("hide").siblings().addClass("hide");
+//        }
+//    }
+    //操作二
+    $("li").click(function () {
+        $(this).addClass("active").siblings().removeClass("active");
+            var $name=$(this).attr("f");
+            $("."+$name).removeClass("hide").siblings().addClass("hide");
+    })
+</script>
+</html>

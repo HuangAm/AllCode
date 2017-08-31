@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>egon-IT界的一股清流</title>
+</head>
+<body>
+<button id="fadeIn">fadeIn</button>
+<button id="fadeOut">fadeOut</button>
+<button id="fadeToggle">fadeToggle</button>
+<button id="fadeTo">fadeTo</button>
+<hr>
+<img src="meinv.bmp" alt="">
+</body>
+<script src="jquery-3.2.1.js"></script>
+<script>
+//    $("#fadeIn").click(function () {
+//        $("img").fadeIn(1000);
+//    });
+//    $("#fadeOut").click(function () {
+//        $("img").fadeOut(1000);
+//    });
+//    $("#fadeToggle").click(function () {
+//        $("img").fadeToggle(1000);
+//    });
+//    $("#fadeTo").click(function () {
+//        $("img").fadeTo(1000,0.4)
+//    });
+    //淡入淡出：隐藏与显示有了一个透明度渐变的效果
+    //应用：替换 removeClass("hide") addClass("hide")
+    //回调函数
+    $("#fadeIn").click(function () {
+        $("img").fadeIn(1000,function () {
+            alert("fadein over")
+        });
+    });
+    $("#fadeOut").click(function () {
+        $("img").fadeOut(1000,function () {
+            alert("fadeout over")
+        });  //1000后边的function就是回调函数,fadeOut完毕后会执行
+    });
+
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>egon-IT界最帅的男人</title>
+    <style>
+        input{
+            width: 54px;
+        }
+    </style>
+    <script>
+        function foo(){
+            alert(123)
+        }
+        function bar() {
+            setInterval(bar,1000);
+            //获取当前时间字符串
+            var curr_time=new Date();
+            var s_time=curr_time.toLocaleString();
+            //找到标签，然后对其value赋值
+            var ele=document.getElementById("timer");
+            ele.value=s_time;
+            console.log(ele);
+        }
+    </script>
+</head>
+<body>
+<input type="text" id="timer" onclick="bar()">
+</body>
+</html>

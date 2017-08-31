@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .content{
+            height: 1800px;
+            background-color: grey;
+        }
+
+        .shade{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: yellow;
+            opacity: 0.3;
+        }
+
+        .mode1{
+            width: 200px;
+            height: 200px;
+            background-color: bisque;
+            position: absolute;
+            top:50%;
+            left: 50%;
+            margin-top: -100px;
+            margin-left: -100px;
+
+        }
+
+        .hide{
+            display: none;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="content">
+    <button onclick="show()">show</button>
+</div>
+
+<div class="shade hide"></div>
+
+
+<div class="mode1 hide">
+    <button onclick="cancle()">cancle</button>
+</div>
+
+<script>
+
+    function show() {
+        var ele_share=document.getElementsByClassName("shade")[0];
+        var ele_mode1=document.getElementsByClassName("mode1")[0];
+
+        ele_share.classList.remove("hide");
+        ele_mode1.classList.remove("hide");
+    }
+
+    function cancle() {
+        var ele_share=document.getElementsByClassName("shade")[0];
+        var ele_mode1=document.getElementsByClassName("mode1")[0];
+
+        ele_share.classList.add("hide");
+        ele_mode1.classList.add("hide");
+
+
+    }
+</script>
+
+
+</body>
+</html>

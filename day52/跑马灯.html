@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>egon</title>
+    <style>
+        h1{
+            background-color: darkmagenta;
+            color: red;
+            text-align: center;
+            line-height:50px;
+        }
+    </style>
+</head>
+<body>
+<h1 class="title">欢迎光临方少伟煞笔</h1>
+<button onclick="foo()">click</button>
+<script>
+    function text() {
+        var ele=document.getElementsByClassName("title")[0];
+        var content=ele.innerText;
+        var first_char=content.charAt(0);
+        var later_string=content.substring(1,content.length);
+        var new_content=later_string+first_char;
+        ele.innerText=new_content;
+    }
+    function foo() {
+        setInterval(text,1000)
+    }
+
+</script>
+</body>
+</html>

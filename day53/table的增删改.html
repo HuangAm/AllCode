@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>egon-IT界的一股清流</title>
+    <style>
+        table{
+            border-collapse:collapse;
+            font-size: 14px;
+            text-align: left;
+        }
+        table th,td{
+            border: 1px solid black;
+            width: auto;
+        }
+        table .statue{
+            height: 20px;
+            width: 40px;
+            line-height: 18px;
+            text-align: center;
+            background-color: green;
+            color: white;
+            font-weight: 700;
+        }
+        table .edit{
+            background-color: yellow;
+            border: 0;
+        }
+        table .cancel{
+            background-color: coral;
+            border: 0;
+        }
+        #hide{
+             display: none;
+            top:0;
+            bottom: 0;
+            left: 0;
+            right:0;
+            background-color:#b4b4b4 ;
+            opacity: 0.6;
+            position: fixed;
+        }
+        #newuser{
+            display:none;
+            position: fixed;
+            top: 20%;
+            left: 50%;
+            margin-left: -200px;
+            height: 400px;
+            width: 400px;
+            background-color: white;
+            line-height: 12px;
+            text-align: center;
+            overflow: scroll;
+        }
+        #but{
+            width: 150px;
+            margin: 0 auto;
+        }
+        #ok{
+            float: left;
+        }
+        #no{
+            float: right;
+        }
+
+
+    </style>
+</head>
+<body>
+<button class="create" onclick="show()">新建用户</button>
+<div id="newuser_out">
+    <div id="hide"></div>
+    <div id="newuser">
+        <h3>新建用户</h3>
+        <p>账号:<input type="text" value=""></p>
+        <p>姓名:<input type="text" value=""></p>
+        <p>性别:<input type="text" value=""></p>
+        <p>邮箱:<input type="text" value=""></p>
+        <p>电话:<input type="text" value=""></p>
+        <p>状态:<input type="text" value=""></p>
+        <p>角色:<input type="text" value=""></p>
+        <p>最后登录时间:<input type="text" value=""></p>
+        <p>操作:<input type="text" value=""></p>
+        <div id="but">
+        <button id="ok">确定</button>     <button id="no">取消</button>
+        </div>
+    </div>
+</div>
+<table cellpadding="10px">
+    <tr>
+        <th>账号</th>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>邮箱</th>
+        <th>电话</th>
+        <th>状态</th>
+        <th>角色</th>
+        <th>最后登录时间</th>
+        <th>操作</th>
+    </tr>
+    <tr>
+        <td class="accounts">admin</td>
+        <td class="administrator">管理员</td>
+        <td class="sex">男</td>
+        <td class="mailbox">45438198@qq.com</td>
+        <td class="telnumber">18888888888</td>
+        <td class="status"><div class="statue">启用</div></td>
+        <td class="role">ceo</td>
+        <td class="timeout">2015-06-26 09:33:03</td>
+        <td class="operating"><button class="edit">编辑</button> <button class="cancel">删除</button></td>
+    </tr>
+    <tr>
+        <td class="accounts">alex</td>
+        <td class="administrator">不爱吃</td>
+        <td class="sex">男</td>
+        <td class="mailbox">45438198@qq.com</td>
+        <td class="telnumber">18888888888</td>
+        <td class="status"><div class="statue">启用</div></td>
+        <td class="role">ceo</td>
+        <td class="timeout">2015-06-26 09:33:03</td>
+        <td class="operating"><button class="edit">编辑</button> <button class="cancel">删除</button></td>
+    </tr>
+    <tr>
+        <td class="accounts">egon</td>
+        <td class="administrator">不爱喝</td>
+        <td class="sex">男</td>
+        <td class="mailbox">45438198@qq.com</td>
+        <td class="telnumber">18888888888</td>
+        <td class="status"><div class="statue">启用</div></td>
+        <td class="role">ceo</td>
+        <td class="timeout">2015-06-26 09:33:03</td>
+        <td class="operating"><button class="edit">编辑</button> <button class="cancel">删除</button></td>
+    </tr>
+    <tr>
+        <td class="accounts">gangdan</td>
+        <td class="administrator">不爱睡</td>
+        <td class="sex">男</td>
+        <td class="mailbox">45438198@qq.com</td>
+        <td class="telnumber">18888888888</td>
+        <td class="status"><div class="statue">启用</div></td>
+        <td class="role">ceo</td>
+        <td class="timeout">2015-06-26 09:33:03</td>
+        <td class="operating"><button class="edit">编辑</button> <button class="cancel" >删除</button></td>
+    </tr>
+
+<script>
+    //隔行换色
+    var eles=document.getElementsByTagName("tr");
+    for (var i=0;i<eles.length;i++){
+        if (i%2==0){
+            eles[i].style.backgroundColor="white";  //是在不知道选什么颜色好，还是白色好看
+        }else{
+            eles[i].style.backgroundColor="white";
+        }
+    }
+
+    //删除功能
+    var eles_cancel=document.getElementsByClassName("cancel");
+    for (var j=0;j<eles_cancel.length;j++){
+        eles_cancel[j].onclick=function () {
+            var ele_tr=this.parentElement.parentElement;
+            var ele_table=ele_tr.parentElement;
+            ele_table.removeChild(ele_tr);
+        }
+    }
+    //新建用户
+    var ele_create=document.getElementsByClassName("create")[0];
+    ele_create.onclick=function () {
+        var ele=document.getElementById("newuser");
+        var ele1=document.getElementById("hide");
+        ele.style.display="block";
+        ele1.style.display="block";
+    };
+    //编辑功能
+    var eles_edit=document.getElementsByClassName("edit");
+    for (var k=0;k<eles_edit.length;k++){
+        eles_edit[k].onclick=function () {
+            var ele_tr=this.parentElement.parentElement;
+            var ele_table=ele_tr.parentElement;
+            ele_table.appendChild(ele_tr);
+            console.log(ele_tr)
+        }
+    }
+
+</script>
+</table>
+</body>
+</html>

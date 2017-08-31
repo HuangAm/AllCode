@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>egon-IT界的一股清流</title>
+</head>
+<body>
+<form action="" id="Form">
+    用户名：<input type="text" name="username" class="con" mark="用户名"><br>
+    密 码&nbsp;&nbsp;：<input type="password" name="pwd" class="con" mark="密码"><br>
+    <input type="submit" value="submit">
+</form>
+</body>
+<script src="jquery-3.2.1.js"></script>
+<script>
+    $("#Form :submit").click(function () {
+        var flag=true;
+        $("#Form .con").each(function () {
+            if ($(this).val().trim().length==0){
+                var span=$("<span>");
+                var mark=$(this).attr("mark");
+                span.text(mark+"不能为空");
+                $(this).after(span); //after参数可以是字符串也可是jq标签对象
+                flag=false;
+                return false;  //在each循环函数中有妙用,可以终止循环
+            }
+        });
+        return flag
+    });
+
+
+//     function f(){
+//        for(var i=0;i<4;i++){
+//            if (i==2){
+//                return
+//            }
+//            console.log(i)
+//        }
+//    }
+//
+//    f();
+
+
+//    li=[11,22,33,44];
+//    $.each(li,function(i,v){      //each在这里是四个函数,和Python里的for循环不一样
+//         if (v==33){
+//                return false;  //结束each往下走
+//            }
+//            console.log(v)
+//    });
+    //each和时间函数中的rerun都不是普通的return
+    //只有return false才会终止事件，return true会继续运行
+</script>
+</html>

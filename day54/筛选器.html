@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>egon-IT界一股清流</title>
+    <style>
+        li{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+<ul class="outer">
+    <li class="item">111</li>
+    <li class="item">222</li>
+    <li class="item">333</li>
+    <li class="item test">444</li>
+    <li class="item">555</li>
+</ul>
+<!--ul.outer>li.item*4-->
+<!--<ul class="outer">-->
+    <!--<li class="item"></li>-->
+    <!--<li class="item"></li>-->
+    <!--<li class="item"></li>-->
+    <!--<li class="item"></li>-->
+<!--</ul>-->
+
+<div class="div1">
+    <div class="div2">
+        <p id="p1">PPP</p>
+    </div>
+    <p class="p2">PPPPP</p>
+    <a href="">click</a>
+</div>
+
+<script src="../day55/jquery-3.2.1.js"></script>
+<script>
+    //过滤筛选器
+//    $("li").eq(2).css("color","red");
+//    $("ul .item").eq(2).css("color","green"); //推荐
+//    var $ret=$("ul li").hasClass("tests"); //判断有没有这个class名
+//    console.log($ret)
+    //查找筛选器
+        //孩子组 children find
+//    console.log($(".div1").children());
+//    console.log($(".div1").children(".p2"));
+//    console.log($(".div1").find("p2"));
+//    $(".div1").find("*").css("color","red"); //find里面必须有参数
+        //兄弟标签 next nextAll nextUntill
+//    $(".div2").next().css("background-color","red")
+//    $(".div2").nextAll().css("background-color","red");
+//    $(".div2").nextUntil("a").css("background-color","red"); //开区间
+//    $(".item").siblings().css("color","red");
+//    $(".test").siblings().css("color","red")
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOM对象</title>
+    <!--window下的所有方法都是可以直界调用的-->
+    <script>
+        //window.alert(123);//alert只要一个按钮，提醒的功能
+
+        //var ret=confirm("num"); //多了一个按钮确定和取消，
+        //console.log(ret); //点确定返回true，点取消返回false
+
+        //var ret=prompt("请输入一个数字：");
+        //console.log(ret);
+
+        //prompt示例：
+            //1先拿到1-100的随机数
+        function func() {
+
+
+        var num = Math.round(Math.random()*100);
+        function acceptInput() {
+            //2让用户输入(prompt)  并接受 用户输入结果
+            var userNum=prompt("请输入一个0~100之间的数字:");
+            //3将用户输入的数字与随机数进行比较
+            if (isNaN(+userNum)){
+                //用户输入无效(重复2,3步骤)
+                alert("请输入有效数字!");
+                acceptInput();
+            }else if(userNum>num){
+                //大了==>提示用户大了，让用户重新输入(重复2,3步骤)
+                alert("您输入的大了!");
+                acceptInput();
+            }else if(userNum<num){
+                //小了==>提示用户小了，让用户重新输入(重复2,3步骤)
+                alert("您输入的小了!");
+                acceptInput();
+            } else {
+                //答对了==>提示用户答对了，询问用户是否继续游戏(confirm).
+                var result=confirm("恭喜您!答对了，是否继续游戏?");
+                if (result){
+                    //是==>重复123步骤
+                    num = Math.round(Math.random()*100);
+                    acceptInput();
+                }else {
+                    //否==> 关闭窗口(close方法)
+                    close();
+                }
+            }
+        }
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

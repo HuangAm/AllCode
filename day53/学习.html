@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<script language="javascript">
+ var rowid=1;
+ function $(id){
+  return document.getElementById(id);
+ }
+ function addRow(){
+  var _tab=$("test");
+  var _row=_tab.insertRow();
+  rowid+=1;
+  var _col1=_row.insertCell();
+  _col1.innerText=rowid;
+  _col1.align="center";
+  var _col2=_row.insertCell();
+  _col2.innerHTML="<input type='text'>";
+  _col2.align="center";
+  var _col3=_row.insertCell();
+  _col3.innerHTML="<input type='text'>";
+  _col3.align="center";
+  var _col4=_row.insertCell();
+  _col4.innerHTML="<input type='text'>";
+  _col4.align="center";
+
+ }
+</script>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>增加行</title>
+</head>
+
+<body>
+ <table>
+  <tr>
+     <td align="center" valign="top">
+    <table width="200" border="1" align="center">
+      <tr>
+     <td><input type="button" name="addBtn" value="&nbsp;&nbsp;add&nbsp;&nbsp;" onClick="addRow();"></td>
+      </tr>
+      <tr>
+     <td><input type="button" name="addBtn" value="delete"></td>
+      </tr>
+    </table>
+     </td>
+   <td><table id="test" border="1">
+    <tr>
+     <td>&nbsp;</td><td align="center">ID</td><td align="center">Name</td><td align="center">Desc</td>
+    </tr>
+    <tr>
+     <td align="center" width="50">1</td>
+     <td><input type="text" name="id" id="testId"></td>
+     <td><input type="text" name="name" id="testName"></td>
+     <td><input type="text" name="desc" id="testDesc"></td>
+    </tr>
+  </table></td>
+  </tr>
+ </table>
+</body>
+</html>

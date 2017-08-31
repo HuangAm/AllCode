@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>egon-IT界一股清流</title>
+</head>
+<body>
+<button id="show">显示</button>
+<button id="hide">隐藏</button>
+<button id="toggle">toggle</button>
+<hr>
+<!--<p>hello world</p>-->
+<img src="meinv.bmp" alt="" width="200px" height="200px">
+</body>
+<script src="jquery-3.2.1.js"></script>
+<script>
+    //事件绑定方式 （不用写on了直接些事件名字)
+    // 标签对象.事件(function(){})
+//    $("#show").click(function () {
+//        alert(123)
+//    })
+//    $("#show").click(function () {
+//        $("p").show(1000)
+//    });
+//    $("#hide").click(function () {
+//        $("p").hide(1000)
+//    });
+//    $("#toggle").click(function () {
+//        $("p").toggle(1000)
+//    })
+    $("#show").click(function () {
+        $("img").show(1000)
+    });
+    $("#hide").click(function () {
+        $("img").hide(1000)
+    });
+    $("#toggle").click(function () {
+        $("img").toggle(1000)
+    })
+</script>
+</html>

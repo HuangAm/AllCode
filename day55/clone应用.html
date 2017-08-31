@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>egon-IT界的一股清流</title>
+</head>
+<body>
+<div class="box">
+    <div class="item">
+        <input type="button" value="+">
+        <input type="text">
+    </div>
+</div>
+
+<script src="jquery-3.2.1.js"></script>
+<script>
+    $(":button").click(function () {
+        var $clone=$(this).parent().clone();
+        $clone.children(":button").val("-");
+        $clone.children(":button").click(function () {
+            $(this).parent().remove()
+        });
+        $(".box").append($clone);
+    })
+</script>
+</body>
+</html>

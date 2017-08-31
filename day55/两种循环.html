@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>egon-IT界的一股清流</title>
+</head>
+<body>
+<ul>
+    <li class="item1">111</li>
+    <li class="item2">222</li>
+    <li class="item3">333</li>
+</ul>
+</body>
+<script src="jquery-3.2.1.js"></script>
+<script>
+    // jQuery 的循环实现,两种方式
+    // 方式一
+    arr=[123,456,"hello"];
+    obj={"name":"egon","age":22};
+    // $.each(arr.function(){})
+//    $.each(arr,function (i,j) {
+//        console.log(i,j); // i是索引值,j是对应的元素
+//    });
+//    $.each(obj,function (i,j) {
+//        console.log(i,j); // i是key值,j是索引值
+//    })
+
+    // 方式二
+    $("ul li").each(function () {
+//        alert(123)
+        if ($(this).hasClass("item2")){
+            console.log(this);
+            console.log($(this));
+            console.log($(this)[0]);
+            alert($(this).text())
+        }
+    })
+
+</script>
+</html>

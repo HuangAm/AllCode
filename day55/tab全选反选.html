@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>egon-IT界一股清流</title>
+</head>
+<body>
+<button>全选</button>
+<button>反选</button>
+<button>取消</button>
+<hr>
+<table border="2px" class="outer">
+    <tr>
+        <td><input type="checkbox" class="item"></td>
+        <td>111</td>
+        <td>111</td>
+        <td>111</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="item"></td>
+        <td>111</td>
+        <td>111</td>
+        <td>111</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="item"></td>
+        <td>111</td>
+        <td>111</td>
+        <td>111</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="item"></td>
+        <td>111</td>
+        <td>111</td>
+        <td>111</td>
+    </tr>
+</table>
+</body>
+<script src="jquery-3.2.1.js"></script>
+<script>
+    var eles=document.getElementsByTagName("button");
+    for (var i=0;i<eles.length;i++){
+            eles[i].onclick=function () {
+                if (this.innerText=="全选"){
+                    $(":checkbox").prop("checked",true);
+                }
+                else if (this.innerText=="取消"){
+                    $(":checkbox").prop("checked",false);
+                }
+                else {
+                    //方式一
+                    $(":checkbox").prop("checked",!$(":checkbox").prop("checked"));
+                    //方式二
+//                    $(":checkbox").each(function () {
+//                        $(this).prop("checked",!$(this).prop("checked"))
+//                    })
+                }
+            }
+    }
+
+</script>
+</html>

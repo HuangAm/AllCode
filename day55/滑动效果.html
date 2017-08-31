@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>egon-IT界的一股清流</title>
+    <style>
+        #con{
+            line-height:50px;
+            background-color: darkmagenta;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<button id="slideDown">slideDown</button>
+<button id="slideUp">slideUp</button>
+<button id="slideToggle">slideToggle</button>
+<hr>
+<div id="con">滑动效果</div>
+
+<script src="jquery-3.2.1.js"></script>
+<script>
+    $("#slideDown").click(function () {
+        $("#con").slideDown();
+    });
+    $("#slideUp").click(function () {
+        $("#con").slideUp();
+    });
+    $("#slideToggle").click(function () {
+        $("#con").slideToggle();
+    })
+</script>
+</body>
+</html>

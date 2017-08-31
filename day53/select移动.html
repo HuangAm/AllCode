@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>egon-IT界一股清流</title>
+    <style>
+        #left{
+            width: 65px;
+            height: 65px;
+        }
+        #right{
+            width: 65px;
+            height: 65px;
+        }
+        #span{
+            display: inline-block;
+            width: 100px;
+            height: 60px;
+            background-color: palevioletred;
+            text-align: center;
+            line-height: 30px;
+            vertical-align: 10px;
+        }
+    </style>
+</head>
+<body>
+<select name="" id="left" multiple size="3">
+    <option value="">金瓶梅</option>
+    <option value="">狼图腾</option>
+    <option value="">大主宰</option>
+</select>
+
+<span id="span">
+    <button id="move"> > </button>
+    <button id="move_all"> >> </button><br>
+    <button id="move1"> < </button>
+    <button id="move_all1"> << </button>
+</span>
+
+<select name="" id="right" multiple size="3">
+    <option value="">西游记</option>
+</select>
+
+<script>
+    var move=document.getElementById("move");
+    var move1=document.getElementById("move1");
+    var move_all=document.getElementById("move_all");
+    var move_all1=document.getElementById("move_all1");
+    var left=document.getElementById("left");
+    var right=document.getElementById("right");
+    var option_arr=left.options;
+    var option_arr1=right.options;
+    move.onclick=function () {
+        for (var i=0;i<option_arr.length;i++){
+            var option=option_arr[i];
+            if (option.selected){
+                right.appendChild(option);
+                i--;
+            }
+        }
+    };
+    move_all.onclick=function () {
+        for (var i=0;i<option_arr.length;i++){
+            var option=option_arr[i];
+            right.appendChild(option);
+            i--;
+        }
+    };
+    move1.onclick=function () {
+        for (var i=0;i<option_arr1.length;i++){
+            var option=option_arr1[i];
+            if (option.selected){
+                left.appendChild(option);
+                i--;
+            }
+        }
+    };
+    move_all1.onclick=function () {
+        for (var i=0;i<option_arr1.length;i++){
+            var option=option_arr1[i];
+            left.appendChild(option);
+            i--;
+        }
+    }
+</script>
+</body>
+</html>

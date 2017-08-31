@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>egon-IT界一股清流</title>
+    <style>
+        .outer{
+            width: 790px;
+            height: 340px;
+            margin: 20px auto;
+            border: 1px darkmagenta solid;
+            position: relative;
+        }
+        ul.img li{
+            position: absolute;
+            top:0;
+            left:0;
+            display: none;
+            list-style:none;
+        }
+        .icon{
+            /*.icon和.img都是绝对定位，为什么.icon就能显示在.img上面，他们应该处于一个面啊*/
+            position: absolute;
+            bottom:20px;
+            left: 150px;
+            list-style: none;
+        }
+        .icon li{
+            display: inline-block;
+            width:30px;
+            height:30px;
+            background-color: gray;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+            border-radius:100%;
+            margin-left:14px;
+        }
+        .btn{
+            position: absolute;
+            top:50%;
+            width:60px;
+            height:80px;
+            background-color:grey;
+            font-size:40px;
+            text-align: center;
+            line-height:80px;
+            opacity: 0.7;
+            margin-top: -40px;
+            color: white;
+        }
+        .left{
+            left:0;
+        }
+        .right{
+            right:0;
+        }
+        .icon .active{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="outer">
+    <ul class="img">
+        <li style="display: block"><img src="https://img1.360buyimg.com/da/jfs/t5704/280/534517430/136399/65cce181/591fee67N9ebef18a.jpg" alt=""></li>
+        <li><img src="https://img1.360buyimg.com/da/jfs/t5773/178/1731817157/131093/b671a375/5928f428N288ece38.jpg" alt=""></li>
+        <li><img src="https://img12.360buyimg.com/da/jfs/t5746/203/2156431554/59225/6d932b9e/592e3d69N4f15c663.jpg" alt=""></li>
+        <li><img src="https://img14.360buyimg.com/da/jfs/t3889/320/1663573324/106061/9f4225e/5885d7e9N0cefb065.jpg" alt=""></li>
+        <li><img src="https://img30.360buyimg.com/da/jfs/t6118/104/1055587811/108016/5ca95960/592f73b2N3ef00eba.jpg" alt=""></li>
+        <li><img src="https://img12.360buyimg.com/da/jfs/t5896/300/2292862978/100299/60344adb/592fb880N0bed72d5.jpg" alt=""></li>
+        <li><img src="https://m.360buyimg.com/babel/jfs/t5587/204/2180769039/104696/9f09c34/592e5734N67a76fa2.jpg" alt=""></li>
+        <li><img src="https://img20.360buyimg.com/da/jfs/t5998/65/201587453/137192/2c118dc2/5926a6a4N14e84054.jpg" alt=""></li>
+    </ul>
+
+    <ul class="icon">
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+    </ul>
+
+    <div class="left btn"> < </div>
+    <div class="right btn"> > </div>
+
+</div>
+
+<script src="jquery-3.2.1.js"></script>
+<script>
+    //自动轮播
+    var i=0;
+    function rorate_right() {
+        if (i==7){
+            i=-1;
+        }
+        i++;
+        $(".icon li").eq(i).addClass("active").siblings().removeClass("active");
+        $(".img li").eq(i).fadeIn(200).siblings().fadeOut(200);
+    }
+    function rorate_left() {
+        if (i==0){
+            i=8;  //数字这里比较难搞,0-7八张图
+        }
+        i--;
+        $(".icon li").eq(i).addClass("active").siblings().removeClass("active");
+        $(".img li").eq(i).fadeIn(200).siblings().fadeOut(200);
+    }
+    var ID=setInterval(rorate_right,1000);
+
+    //鼠标悬浮到.outer区域,轮播效果
+    //houver(in,out)悬入触发的事件,悬出触发的时间
+    $(".outer").hover(function () {
+        clearInterval(ID); //删除ID阻止自动轮播
+    },function () {
+        ID=setInterval(rorate_right,1000); //继续轮播
+    });
+
+    //鼠标悬浮到下面按钮,轮播效果
+    //方式一：
+    $(".icon li").mouseover(function () {
+        i =$(this).index(); //拿到li标签的索引
+        $(".icon li").eq(i).addClass("active").siblings().removeClass("active");
+        $(".img li").eq(i).fadeIn(200).siblings().fadeOut(200);
+    });
+
+    //左右按钮
+    $(".right").click(function () {
+        rorate_right();
+        clearInterval(ID); //加这个是想着点击的时候就停止自动轮播了
+    });
+    $(".left").click(function () {
+        rorate_left();
+        clearInterval(ID);
+    })
+
+
+</script>
+
+</body>
+</html>

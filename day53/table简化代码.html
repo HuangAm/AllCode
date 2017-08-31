@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>egon-IT界一股清流</title>
+</head>
+<body>
+    <button class="all">全选</button>
+    <button class="reverse">反选</button>
+    <button class="cancel">取消</button>
+    <hr>
+    <table border="2px" class="server_tb">
+        <tr>
+            <td><input type="checkbox" class="item"></td>
+            <td>1111</td>
+            <td>1111</td>
+            <td>1111</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="item"></td>
+            <td>1111</td>
+            <td>1111</td>
+            <td>1111</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="item"></td>
+            <td>1111</td>
+            <td>1111</td>
+            <td>1111</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="item"></td>
+            <td>1111</td>
+            <td>1111</td>
+            <td>1111</td>
+        </tr>
+    </table>
+
+    <script>
+        var eles=document.getElementsByTagName("button");
+        var input_arr=document.getElementsByClassName("item");
+        for (var i=0;i<eles.length;i++){
+            if (eles[i].innerText == "全选"){
+                eles[i].onclick=function (){
+                    for (var j=0;j<input_arr.length;j++){
+                    var input=input_arr[j];
+                    input.checked=true;
+                    }
+                }
+            }
+            else if (eles[i].innerText == "反选"){
+                eles[i].onclick=function () {
+                    for (var h=0;h<input_arr.length;h++){
+                        var input=input_arr[h];
+                        if (input.checked){
+                            input.checked=false;
+                        }else {
+                            input.checked=true;
+                        }
+                    }
+                }
+            }
+            else if (eles[i].innerText == "取消"){
+                eles[i].onclick=function () {
+                    for (var k=0;k<input_arr.length;k++){
+                    var input=input_arr[k];
+                    input.checked=false;
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

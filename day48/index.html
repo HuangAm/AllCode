@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>egon-全世界最帅的男人</title>
+    <style>
+        a:link{color: blue}
+        a:hover{color: red;}
+        a:visited{color: purple}
+        a:active{color: yellow}
+        a{
+            font-size: 25px;
+        }
+        .top{
+            background-color: #2459a2;
+            width:100px;
+            height:100px;
+        }
+        .bottom{
+            background-color: blue;
+            width:100px;
+            height:100px;
+        }
+        .outer:hover .top{
+            background-color: red;
+        }
+        p:after{
+            content: "world";
+            color: red;
+        }
+        .clearfix{
+            clear:both;
+        }
+        .outer:after{
+            display: block;
+            content: "";
+            clear: both;
+        }
+        .outer:before{
+            display: block;
+            content: 'hello';
+            color: #000;
+        }
+        .item{
+            width: 300px;
+            height:300px;
+            background-color: green;
+            /*overflow: hidden;*/
+            overflow:scroll;
+            line-height:300px;
+        }
+        .btn{
+            width:50px;
+            height:50px;
+            background-color: gray;
+            color: white;
+            line-height:50px;
+            text-align: center;
+        }
+    </style>
+</head>
+    <body>
+        <a href="#">hello python</a>
+        <div class="outer">
+            <div class="top"></div>
+            <div class="bottom"></div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="item">
+            <p>111111</p>
+            <p>111111</p>
+            <p>111111</p>
+            <p>111111</p>
+            <p>111111</p>
+            <p>111111</p>
+            <p>111111</p>
+            <p>111111</p>
+            <p>111111</p>
+            <p>111111</p>
+            <p>111111</p>
+        </div>
+        <p>hello</p>
+        <div class="btn"><</div>
+    </body>
+</html>

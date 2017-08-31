@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>egon-IT界最帅的男人</title>
+    <style>
+        #container{
+            width: 300px;
+            background-color: purple;
+            text-align: center;
+            line-height: 50px;
+        }
+        #list{
+            display: none;
+        }
+        #list .item1{
+            background-color: red;
+        }
+        #list .item2{
+            background-color: yellow;
+        }
+        #list .item3{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="title">mouseout演示</div>
+    <div id="list">
+        <div class="item1">帅egon帅</div>
+        <div class="item2">帅egon帅</div>
+        <div class="item3">帅egon帅</div>
+    </div>
+</div>
+
+<script>
+    var container=document.getElementById("container");
+    var list=document.getElementById("list");
+    var title=document.getElementById("title");
+    title.onmouseover=function () {
+        list.style.display="block";
+    };
+    //onmouseout:除了给元素绑定改事件以外还会给他的子元素绑定
+//    container.onmouseout=function () {
+//        list.style.display="none";
+//    }
+//    container.onmouseleave=function () {
+//        list.style.display="none"
+//    }
+//      list.onmouseout=function () {
+//        list.style.display="none";
+//    }
+
+</script>
+</body>
+</html>

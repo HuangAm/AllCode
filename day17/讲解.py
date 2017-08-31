@@ -1,0 +1,2 @@
+#coding:gbk
+print ("ÖÐ¹ú".decode("gbk"))

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>egon-IT界最帅的男人</title>
+</head>
+<body>
+
+<div onclick="alert('egon666')">单击事件</div><!--on就是监听的意思-->
+<div ondblclick="alert('egon666')">双击事件</div>
+<input class="input" type="text" value="请输入姓名" onfocus="foo(this)" onblur="bar(this)">
+
+<script>
+    function foo(self) {
+        if (self.value=="请输入姓名"){
+            self.value="";
+        }
+    }
+    function bar(self) {
+        if (self.value.trim()==""){
+            self.value="请输入姓名"
+        }
+    }
+</script>
+</body>
+</html>

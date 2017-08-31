@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>egon-IT界最帅的男人</title>
+</head>
+<body>
+<form action="" method="post" id="form">  <!--以post方式发起请求-->
+    用户名：<p><input type="text" name="username"></p>
+    密码：<p><input type="password" name="pwd"></p>
+    <p><input type="submit" value="提交"></p>
+</form>
+<script>
+    var ele=document.getElementById("form");
+    //onsubmit事件是绑定在form标签上的
+    //在绑定一个事件，本身submit就有一个默认事件
+    //先执行已绑定的事件，再执行默认事件
+    //阻止默认事件用于在客户端认证账号密码格式
+    ele.onsubmit=function (e) {
+        alert(123);
+//        return false;  //第一种方法
+        e.preventDefault(); //第二种方法
+        //e代表event是一个封装了当前状态事件的对象
+    }
+</script>
+</body>
+</html>

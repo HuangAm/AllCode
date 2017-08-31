@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>egon-IT界最帅的男人</title>
+</head>
+<body>
+<select name="" class="select_pro">
+    <option value="1">河南省</option>
+    <option value="1">湖南省</option>
+    <option value="1">山西省</option>
+</select>
+
+<select name="" class="select_city">
+    <option value="">- -</option>
+</select>
+
+<script>
+    var info={"河南省":["郑州","洛阳","开封"],"湖南省":["湘潭","长沙","岳阳"],"山西省":["太原","大同","临汾"]}
+    var ele=document.getElementsByClassName("select_pro")[0];//找到class="select_pro"的标签
+    var ele2=document.getElementsByClassName("select_city")[0];//找到class="select_city"的标签
+    //给第一个select标签绑定一个onchange事件，域的内容发生变化的时候触发函数，选省份
+    ele.onchange=function () {
+        var arrs=ele.children; //获得select的所有子标签，数组的形式
+        var sindex=this.selectedIndex; //获取option标签的索引值
+        var province=arrs[sindex].innerText; //通过索引值拿到opetion标签的文本内容省份
+        var citys_arr=info[province]; //拿到省份地下的城市名，数组形式
+        console.log(citys_arr); //打印出城市数组
+        var ele2son=ele2.children;
+        ele2.options.length=0; //清空select的子元素
+//        var count=ele2.options.length;
+//        for (var j=0;j<count;j++){
+//            ele2.removeChild(ele2son[0])
+//        }
+        for (var i=0;i<citys_arr.length;i++){
+            var option=document.createElement("option");
+            option.innerText=citys_arr[i];
+            ele2.appendChild(option);
+        }
+    }
+</script>
+</body>
+</html>
