@@ -44,20 +44,25 @@
 
 import requests
 from bs4 import BeautifulSoup
-response = requests.get('http://www.autohome.com.cn/news/')
-response.encoding='gbk'
-soup = BeautifulSoup(response.text,'html.parser')
-li_list = soup.find(id='auto-channel-lazyload-article').find_all('li')
-for li in li_list:
-    title = li.find('h3')
-    if not title:
-        continue
-    print(title.text)
-    summary = li.find('p').text
-    #li.find('a').attrs获取a标签的所有属性
-    url = li.find('a').get('href') #只获取a标签的href属性
-    img = li.find('img').get('src')
-    print(title.text,url,summary,img)
-    import re
-    img_name = re.split("/*",img).pop()
-    print(img_name)
+# response = requests.get('http://www.autohome.com.cn/news/')
+# response.encoding='gbk'
+# soup = BeautifulSoup(response.text,'html.parser')
+# li_list = soup.find(id='auto-channel-lazyload-article').find_all('li')
+# for li in li_list:
+#     title = li.find('h3')
+#     if not title:
+#         continue
+#     print(title.text)
+#     summary = li.find('p').text
+#     #li.find('a').attrs获取a标签的所有属性
+#     url = li.find('a').get('href') #只获取a标签的href属性
+#     img = li.find('img').get('src')
+#     print(title.text,url,summary,img)
+#     import re
+#     img_name = re.split("/*",img).pop()
+#     print(img_name)
+
+response = requests.get('http://wx4.sinaimg.cn/mw600/8ae91e74gy1fj6iu9269ej21kw16odvs.jpg')
+print(response.content)
+with open("bb.jpg",'wb+')as f:
+    f.write(response.content)
