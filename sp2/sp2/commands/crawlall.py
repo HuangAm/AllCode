@@ -12,6 +12,7 @@ class Command(ScrapyCommand):
         return 'Runs all of the spiders'
 
     def run(self,args,opts):
+        from scrapy.crawler import CrawlerProcess
         spider_list = self.crawler_process.spiders.list()
         for name in spider_list:
             self.crawler_process.crawl(name,**opts.__dict__)
