@@ -1,0 +1,8 @@
+2018-02-05 17:16:13,384 - INFO - account:1234   action:repay    amount:100.0   interest:0.0
+2018-02-05 17:16:27,687 - INFO - account:1234   action:withdraw    amount:250.0   interest:12.5
+2018-02-05 17:16:44,718 - INFO - account:1234   action:transfer    amount:1000.0   interest:50.0
+2018-02-05 17:16:44,720 - INFO - account:2234   action:repay    amount:1000.0   interest:0.0
+2018-02-05 17:19:25,460 - INFO - account:1234   action:repay    amount:100.0   interest:0.0
+2018-02-05 20:10:16,649 - INFO - account:1234   action:withdraw    amount:1000.0   interest:50.0
+2018-02-06 11:08:15,153 - INFO - account:2234   action:withdraw    amount:100.0   interest:5.0
+2018-02-06 11:28:31,579 - INFO - account:2234   action:withdraw    amount:100.0   interest:5.0

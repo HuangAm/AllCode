@@ -1,0 +1,61 @@
+卷 文档 的文件夹 PATH 列表
+卷序列号为 9481-B1FF
+E:.
+│  tree.txt
+│  __init__.py
+│  
+├─atm
+│  │  ATM.py   ATM执行程序
+│  │  __init__.py
+│  │  
+│  ├─conf
+│  │  │  display.py  菜单模板
+│  │  │  setting.py  参数
+│  │  │  __init__.py
+│  │          
+│  ├─core
+│  │  │  auth.py     用户认证
+│  │  │  db_handler.py  数据存取
+│  │  │  log.py	日志记录
+│  │  │  main.py	主程序
+│  │  │  transaction.py  账户操作
+│  │  │  __init__.py
+│  │  │  
+│  │          
+│  ├─logs   日志目录
+│  │      access.log  登录相关
+│  │      transactions.log  交易相关
+│  │      __init__.py
+│  │      
+│  ├─user_db  用户数据
+│  │  ├─manager super用户
+│  │  │      sample.py
+│  │  │      super.json
+│  │  │      __init__.py
+│  │  │      
+│  │  └─person 个人用户
+│  │          1234.json
+│  │          2234.json
+│  │          sample.py
+│  │          __init__.py
+│  │          
+├─shopping
+│  │  credit_port.py 调用atm
+│  │  display.py 显示模板
+│  │  main.py 主程序
+│  │  SHOP.py  购物执行文件
+│  │  __init__.py
+│  │  
+│  ├─data 用户商品文件
+│  │      goods_file
+│  │      goods_init.py
+│  │      user.json
+│  │      user_init.py
+│  │      __init__.py
+│  │      
+│  ├─log 购物日志
+│  │      __init__.py
+│  │      
+       
+
+        

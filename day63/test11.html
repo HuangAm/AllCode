@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+     chart = Highcharts.stockChart('container', {
+            navigator: {
+                series: {
+                    color: "transparent",
+                    lineWidth: 0
+                },
+                height: 20,
+                maskFill: "rgba(180, 198, 220, 0.75)",
+                xAxis: {
+                    type: "datetime",
+                    dateTimeLabelFormats: {
+                        day: "%b %e",
+                        week: "%b %e",
+                        month: "%b %Y"
+                    }
+                }
+            },
+            rangeSelector: {
+                // allButtonsEnabled: true
+                buttonTheme: {
+                    display: 'none' // 不显示按钮
+                },
+                selected: 5,
+                inputEnabled: false // 不显示日期输入框
+            },
+            exporting:{
+              enabled:false, // 隐藏 exporting导出 按钮
+            },
+            chart: {
+                animation: false,
+                showAxes: true
+            },
+            credits: { //版权信息配置
+                enabled: false
+            },
+            tooltip: { // 数据提示框配置
+                split: false,//把x轴和y轴放在一个图标里
+                xDateFormat: '%Y年%m月%d日，%A',//鼠标移动到趋势线上时显示的日期格式
+                shared: true,
+                pointFormatter: function () {
+                    return '<span style="color: ' + this.series.color + '">\u25CF</span> ' + this.series.name + ': <b>' + (this.y).toFixed(3) + '%</b><br/>'
+                }
+            },
+            xAxis: {
+                gridLineWidth: 1,
+                gridLineColor: "lightgray",
+                crosshair: { // 十字准星线配置
+                    width: 1,
+                    color: "grey"
+                },
+                type: 'datetime', // 时间轴
+                tickmarkPlacement: "on", // 点和x轴对齐
+                labels: {
+                    formatter: function () {
+                        return Highcharts.dateFormat("%Y-%m-%d", this.value);
+                    }
+                },
+                tickInterval:1*24*60*60*1000,
+                tickPixelInterval:200
+            },
+            yAxis: {
+                labels: {
+                    formatter: function () {
+                        return this.value + "%"; // y轴数据百分比
+                    }
+                },
+                lineWidth:2,
+                tickPixelInterval:20,
+                minorGridLineWidth:1,
+                minorTickWidth:0,
+                opposite:!0,
+                offset:20,
+                plotLines:[{
+                    value:0,
+                    color:"black",
+                    width:2
+                }]
+            },
+            series: [{
+                name: '',
+                data: [],
+                color: "#CCCCCC",
+                enableMouseTracking: false //鼠标移动的时候0轴信息不显示
+            }, {
+                name: '策略收益',
+                data: [],
+                color: "#058DC7"
+            }, {
+                name: '基准收益',
+                data: [],
+                color: "#990033"
+            }]
+        })
+    }
+</script>
+</html>

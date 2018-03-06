@@ -1,0 +1,12 @@
+	
+电脑型号	华硕 X555LJ 笔记本电脑  (扫描时间：2017年12月12日)
+操作系统	Windows 10 专业版 64位 ( DirectX 12 )
+	
+处理器	英特尔 Core i7-5500U @ 2.40GHz 双核
+主板	华硕 X555LJ ( 英特尔 Broadwell-U - 5th Generation Intel Core Premium SKU - 9CC3 笔记本芯片组 )
+内存	4 GB ( DDR3 1600MHz )
+主硬盘	希捷 ST1000LM024 HN-M101MBB ( 1 TB / 5400 转/分 )
+显卡	Nvidia GeForce 920M ( 2 GB )
+显示器	友达 AUO38ED ( 15.3 英寸  )
+声卡	瑞昱  @ 英特尔 High Definition Audio Controller
+网卡	瑞昱 RTL8168/8111/8112 Gigabit Ethernet Controller / 华硕
